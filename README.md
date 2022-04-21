@@ -3,60 +3,65 @@
 - en [English](README.md)
 - zh_CN [简体中文](README.zh_CN.md)
 
-### 简介
+### Introduction
 
-react-tmap，一个基于腾讯地图、TypeScript 封装适用于 react 的高性能地图组件库，拥有以下功能特性：
+react-tmap, a high-performance map component library for react based on Tencent Maps and TypeScript encapsulation, has the following features:
 
-- 文档完善：基于官方文档和框架用法的文档可读性搞，组件示例完善
-- 组件化：封装腾讯地图命令式的 api 为响应式组件，无需关心复杂的地图 api，只需要操作数据即可
-- 多框架：包含 [react-tmap]() 和 [vue-tmap]()，且共享同一套类型定义
-- Type-safe：补充了腾讯地图 sdk 的类型声明，组件也使用 TypeScript 开发，更好的开发体验
-- 自定义组件：提供开放地图实例，可编写自定义组件或直接调用地图原生 api
-- 性能优化：统一地图 api 调用方式和数据监听，防止误用地图 api 引起性能问题
+- Complete documentation: documentation based on official documentation and framework usage is highly readable, and component examples are complete
+- Componentization: Encapsulate the Tencent Maps imperative api as a responsive component, no need to care about the complex map api, only need to operate the data
+- Multi-framework: contains [react-tmap]() and [vue-tmap](), and share the same set of type definitions
+- Type-safe: supplemented the type declaration of Tencent Maps sdk, components are also developed using TypeScript, a better development experience
+- Custom components: provide an open map instance, you can write custom components or directly call the map's native api
+- Performance optimization: unify the map api calling method and data monitoring to prevent performance problems caused by misuse of the map api
 
-### 文档和示例
+### Documentation and Examples
 
-访问 [官方文档地址]()，查看更多地图组件
+Visit [Official document address]() to see more map components
 
-> [腾讯地图官方文档](https://lbs.qq.com/webApi/javascriptGL/glDoc/glDocIndex)
+> [Tencent Maps Official Documentation](https://lbs.qq.com/webApi/javascriptGL/glDoc/glDocIndex)
 
-### 主要组件
+### Main Components
 
-| react 组件    | 描述             |
+| react component | description |
 | ------------- | ---------------- |
-| Map           | 地图基础组件     |
-| MultiMarker   | 多个标注点       |
-| MultiPolyline | 折线             |
-| MultiPolygon  | 多边形           |
-| MultiLabel    | 文本标注         |
-| MultiCircle   | 圆形             |
-| DOMOverlay    | DOM 覆盖物抽象类 |
-| InfoWindow    | 信息提示窗       |
-| MarkerCluster | 点聚合           |
+| Map | Map Basic Components |
+| MultiMarker | Multiple Marker Points |
+| MultiPolyline | Polyline |
+| MultiPolygon | Polygon |
+| MultiLabel | Text Labeling |
+| MultiCircle | Circle |
+| DOMOverlay | DOM overlay abstract class |
+| InfoWindow | Information prompt window |
+| MarkerCluster | Point Aggregation |
 
-### 快速开始
+### Component library warehouse architecture diagram
 
-#### 安装
+![Warehouse Architecture Diagram](https://pt-starimg.didistatic.com/static/starimg/img/hoIR5zeNlu1650526012816.png)
+
+
+### Quick start
+
+#### Install
 
 ```shell
 npm install @didi/react-tmap
-```
+````
 
-#### 申请腾讯地图密钥
+#### Apply for Tencent map key
 
 https://lbs.qq.com/dev/console/key/manage
 
-#### 简单示例
+#### Simple example
 
-```javascript
+````javascript
 import React, { useState } from 'react';
 import { TMap, MultiPolygon } from '@didi/react-tmap';
 
 const styles = {
   polygon: {
-    color: '#3777FF', //面填充色
-    showBorder: false, //是否显示拔起面的边线
-    borderColor: '#00FFFF', //边线颜色
+    color: '#3777FF', //surface fill color
+    showBorder: false, //whether to show the edge of the pulled face
+    borderColor: '#00FFFF', //border color
   },
 };
 
@@ -69,9 +74,9 @@ const paths = [
 
 const geometries = [
   {
-    id: 'p1', //该多边形在图层中的唯一标识（删除、更新数据时需要）
-    styleId: 'polygon', //绑定样式名
-    paths: paths, //多边形轮廓
+    id: 'p1', //The unique identifier of the polygon in the layer (required when deleting and updating data)
+    styleId: 'polygon', //binding style name
+    paths: paths, //polygon outline
   },
 ];
 
@@ -94,14 +99,14 @@ export default () => {
   return (
     <div>
       <div>
-        <button onClick={() => setColor('#00FFFF')}>修改多边形颜色</button>
-        <button onClick={() => setZoom(zoom + 1)}>修改地图缩放级别</button>
+        <button onClick={() => setColor('#00FFFF')}>Modify polygon color</button>
+        <button onClick={() => setZoom(zoom + 1)}>Modify map zoom level</button>
       </div>
 
       <TMap
-        mapKey="TOZBZ-OU2CX-JJP4Z-7FCBV-CDDJ2-AHFQZ" // 申请的 key
+        mapKey="TOZBZ-OU2CX-JJP4Z-7FCBV-CDDJ2-AHFQZ" // The applied key
         zoom={zoom}
-        center={center} // 设置中心点坐标
+        center={center} // set the center point coordinates
         control={{
           zoom: { position: 'BOTTOM_RIGHT' },
           scale: false,
@@ -111,40 +116,36 @@ export default () => {
         <MultiPolygon
           styles={polygonStyles}
           geometries={geometries}
-          onClick={() => console.log('点击了多边形')} // 点击多边形
+          onClick={() => console.log('Polygon clicked')} // Click on the polygon
         />
       </TMap>
     </div>
   );
 };
-```
+````
 
-> mapKey 为新申请的密钥
+> mapKey is the newly applied key
 
-### 贡献指南
+### Contribution Guidelines
 
-> 感谢所有参与贡献的技术爱好者，一起共建好用易用的地图组件库
+> Thanks to all the technical enthusiasts who participated in the contribution, let's build an easy-to-use map component library together
 
-#### 提交错误
+#### Commit bug
 
-请通过 issue 提交错误，详细描述错误复现方式和依赖版本，最好通过在线代码编辑器展示复现代码
+Please submit a bug through issue, and describe in detail how to reproduce the error and the version of dependencies. It is best to display the reproduced code through an online code editor.
 
-#### 提交代码
+#### Submit code
 
-请通过 pull request 提交您的代码，我们将尽快查看
+Please submit your code via pull request and we'll take a look soon
 
-#### 开始开发
+#### Start development
 
-```
+````
 git clone xxx
 
-cd react-tmap   // cd vue-tmap
+cd react-tmap // cd vue-tmap
 
 npm install
 
 npm run dev
-```
-
-### 交流
-
-开源后补充微信群
+````
