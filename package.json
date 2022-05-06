@@ -31,7 +31,7 @@
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
-    "@didi/tmap-types": "^1.0.0"
+    "@didi/tmap-types": "github:didi/tmap-types"
   },
   "devDependencies": {
     "@types/events": "^3.0.0",
@@ -44,6 +44,6 @@
     "yorkie": "^2.0.0"
   },
   "dependencies": {
-    "@didi/tmap-types": "^1.0.5"
+    "@didi/tmap-types": "github:didi/tmap-types"
   }
 }
