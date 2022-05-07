@@ -14,7 +14,7 @@ nav:
  */
 
 import React, { useState } from 'react';
-import { TMap, InfoWindow } from '@didi/react-tmap';
+import { TMap, InfoWindow } from '@map-component/react-tmap';
 
 export default () => {
   const [visible, setVisible] = useState(true);

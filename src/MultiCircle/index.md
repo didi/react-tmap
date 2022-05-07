@@ -13,7 +13,7 @@ nav:
  * compact: true
  */
 import React, { useState } from 'react';
-import { TMap, MultiCircle } from '@didi/react-tmap';
+import { TMap, MultiCircle } from '@map-component/react-tmap';
 
 const styles = {
   circle: {

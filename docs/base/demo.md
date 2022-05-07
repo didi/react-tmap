@@ -14,7 +14,7 @@ nav:
  */
 
 import React, { useState, useRef } from 'react';
-import { TMap, MultiPolyline, MultiMarker } from '@didi/react-tmap';
+import { TMap, MultiPolyline, MultiMarker } from '@map-component/react-tmap';
 
 const paths = [
   { lat: 39.98481500648338, lng: 116.30571126937866 },

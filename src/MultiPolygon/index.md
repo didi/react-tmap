@@ -14,7 +14,7 @@ nav:
  */
 
 import React, { useState } from 'react';
-import { TMap, MultiPolygon } from '@didi/react-tmap';
+import { TMap, MultiPolygon } from '@map-component/react-tmap';
 
 const styles = {
   polygon: {

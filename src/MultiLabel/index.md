@@ -14,7 +14,7 @@ nav:
  */
 
 import React, { useState } from 'react';
-import { TMap, MultiLabel } from '@didi/react-tmap';
+import { TMap, MultiLabel } from '@map-component/react-tmap';
 
 const geometries = [
   {
