@@ -12,7 +12,7 @@ nav:
  */
 
 import React from 'react';
-import { TMap, MultiCluster } from '@didi/react-tmap';
+import { TMap, MultiCluster } from '@map-component/react-tmap';
 
 const randomPosition = () => ({
   lat: 30 + Math.random() * 10,

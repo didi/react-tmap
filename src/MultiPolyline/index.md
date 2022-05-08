@@ -14,7 +14,7 @@ nav:
  */
 
 import React, { useState } from 'react';
-import { TMap, MultiPolyline } from '@didi/react-tmap';
+import { TMap, MultiPolyline } from '@map-component/react-tmap';
 
 const styles = {
   styleBlue: {

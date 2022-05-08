@@ -1,7 +1,7 @@
 {
   "private": false,
-  "name": "@didi/react-tmap",
-  "version": "0.1.8",
+  "name": "@map-component/react-tmap",
+  "version": "0.1.0",
   "scripts": {
     "dev": "dumi dev",
     "start:server": "NODE_ENV=server dumi dev ",
@@ -24,6 +24,9 @@
   "homepage": "https://github.com/didi/react-tmap",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
   "typings": "dist/index.d.ts",
   "gitHooks": {
     "pre-commit": "lint-staged"
@@ -39,7 +42,7 @@
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
-    "@didi/tmap-types": "^1.0.0"
+    "@didi/tmap-types": "github:didi/tmap-types"
   },
   "devDependencies": {
     "@types/events": "^3.0.0",
@@ -52,6 +55,6 @@
     "yorkie": "^2.0.0"
   },
   "dependencies": {
-    "@didi/tmap-types": "^1.0.5"
+    "@didi/tmap-types": "github:didi/tmap-types"
   }
 }

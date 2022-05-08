@@ -17,20 +17,20 @@ https://lbs.qq.com/dev/console/key/manage
 ### npm 安装
 
 ```bash
-npm install @didi/react-tmap --save
+npm install @map-component/react-tmap --save
 ```
 
 ### yarn 安装
 
 ```bash
-yarn add @didi/react-tmap
+yarn add @map-component/react-tmap
 ```
 
 ## 引入 react-tmap
 
 ```javascript
 import React from 'react';
-import { TMap } from '@didi/react-tmap';
+import { TMap } from '@map-component/react-tmap';
 
 export default () => (
   <TMap mapKey="TOZBZ-OU2CX-JJP4Z-7FCBV-CDDJ2-AHFQZ" version="1.exp" />

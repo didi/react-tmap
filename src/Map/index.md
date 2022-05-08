@@ -15,7 +15,7 @@ nav:
  * compact: true
  */
 import React, { useRef, useState, useEffect } from 'react';
-import { TMap, MultiPolygon } from '@didi/react-tmap';
+import { TMap, MultiPolygon } from '@map-component/react-tmap';
 
 const path = [
   //多边形轮廓点串（LatLng数组）

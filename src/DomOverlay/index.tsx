@@ -77,7 +77,7 @@ class DomOverlayComponent extends React.Component<Props> {
       this.dom.style.transform = `translate(${left}, ${top})`;
     };
 
-    this.map = this.context;
+    this.map = this.context as any;
     this.DomClass = DomClass;
     this.initMapEle();
   }

@@ -9,43 +9,42 @@ react-tmap, a high-performance map component library for react based on Tencent 
 
 - Complete documentation: documentation based on official documentation and framework usage is highly readable, and component examples are complete
 - Componentization: Encapsulate the Tencent Maps imperative api as a responsive component, no need to care about the complex map api, only need to operate the data
-- Multi-framework: contains [react-tmap]() and [vue-tmap](), and share the same set of type definitions
+- Multi-framework: contains [react-tmap](https://github.com/didi/react-tmap) and [vue-tmap](https://github.com/didi/vue-tmap), and share the same set of type definitions
 - Type-safe: supplemented the type declaration of Tencent Maps sdk, components are also developed using TypeScript, a better development experience
 - Custom components: provide an open map instance, you can write custom components or directly call the map's native api
 - Performance optimization: unify the map api calling method and data monitoring to prevent performance problems caused by misuse of the map api
 
 ### Documentation and Examples
 
-Visit [Official document address]() to see more map components
+Visit [Official document address](https://didi.github.io/react-tmap/) to see more map components
 
 > [Tencent Maps Official Documentation](https://lbs.qq.com/webApi/javascriptGL/glDoc/glDocIndex)
 
 ### Main Components
 
-| react component | description |
-| ------------- | ---------------- |
-| Map | Map Basic Components |
-| MultiMarker | Multiple Marker Points |
-| MultiPolyline | Polyline |
-| MultiPolygon | Polygon |
-| MultiLabel | Text Labeling |
-| MultiCircle | Circle |
-| DOMOverlay | DOM overlay abstract class |
-| InfoWindow | Information prompt window |
-| MarkerCluster | Point Aggregation |
+| react component | description                |
+| --------------- | -------------------------- |
+| Map             | Map Basic Components       |
+| MultiMarker     | Multiple Marker Points     |
+| MultiPolyline   | Polyline                   |
+| MultiPolygon    | Polygon                    |
+| MultiLabel      | Text Labeling              |
+| MultiCircle     | Circle                     |
+| DOMOverlay      | DOM overlay abstract class |
+| InfoWindow      | Information prompt window  |
+| MarkerCluster   | Point Aggregation          |
 
 ### Component library warehouse architecture diagram
 
 ![Warehouse Architecture Diagram](https://pt-starimg.didistatic.com/static/starimg/img/hoIR5zeNlu1650526012816.png)
-
 
 ### Quick start
 
 #### Install
 
 ```shell
-npm install @didi/react-tmap
-````
+npm install @map-component/react-tmap
+```
 
 #### Apply for Tencent map key
 
@@ -53,9 +52,9 @@ https://lbs.qq.com/dev/console/key/manage
 
 #### Simple example
 
-````javascript
+```javascript
 import React, { useState } from 'react';
-import { TMap, MultiPolygon } from '@didi/react-tmap';
+import { TMap, MultiPolygon } from '@map-component/react-tmap';
 
 const styles = {
   polygon: {
@@ -99,7 +98,9 @@ export default () => {
   return (
     <div>
       <div>
-        <button onClick={() => setColor('#00FFFF')}>Modify polygon color</button>
+        <button onClick={() => setColor('#00FFFF')}>
+          Modify polygon color
+        </button>
         <button onClick={() => setZoom(zoom + 1)}>Modify map zoom level</button>
       </div>
 
@@ -122,7 +123,7 @@ export default () => {
     </div>
   );
 };
-````
+```
 
 > mapKey is the newly applied key
 
@@ -140,7 +141,7 @@ Please submit your code via pull request and we'll take a look soon
 
 #### Start development
 
-````
+```
 git clone xxx
 
 cd react-tmap // cd vue-tmap
@@ -148,4 +149,4 @@ cd react-tmap // cd vue-tmap
 npm install
 
 npm run dev
-````
+```

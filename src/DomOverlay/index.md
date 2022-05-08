@@ -13,7 +13,7 @@ nav:
  * compact: true
  */
 import React, { useState, useRef } from 'react';
-import { TMap, DomOverLay, DomData } from '@didi/react-tmap';
+import { TMap, DomOverLay, DomData } from '@map-component/react-tmap';
 
 const paths = [
   { lat: 40.041054, lng: 116.272305 },
