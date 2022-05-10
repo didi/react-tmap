@@ -1,7 +1,7 @@
 ---
 hero:
   title: react-tmap
-  desc: 基于 React 的腾讯地图开发组件库
+  desc: 基于腾讯地图JavaScript API GL、TypeScript 封装的 react 地图组件库
   actions:
     - text: 开始
       link: /components

@@ -4,9 +4,8 @@
 ![](https://img.shields.io/npm/dt/@map-component/react-tmap.svg)
 ![](https://img.shields.io/npm/l/express.svg)
 
-
-- en [English](README.md)
-- zh_CN [简体中文](README.zh_CN.md)
+- en [English](https://github.com/didi/react-tmap/blob/main/README.md)
+- zh_CN [简体中文](https://github.com/didi/react-tmap/blob/main/README.zh_CN.md)
 
 ### Introduction
 

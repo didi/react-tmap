@@ -1,7 +1,25 @@
 {
   "private": false,
   "name": "@map-component/react-tmap",
-  "version": "0.1.0",
+  "version": "0.1.2",
+  "description": "基于腾讯地图JavaScript API GL、TypeScript 封装适用于 react 的高性能地图组件库",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/didi/react-tmap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/didi/react-tmap/issues"
+  },
+  "homepage": "https://didi.github.io/react-tmap/",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "keywords": [
+    "map",
+    "tmap",
+    "qqmap",
+    "react map",
+    "map component"
+  ],
   "scripts": {
     "dev": "dumi dev",
     "start:server": "NODE_ENV=server dumi dev ",
@@ -14,16 +32,6 @@
     "test": "umi-test",
     "test:coverage": "umi-test --coverage"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/didi/react-tmap.git"
-  },
-  "bugs": {
-    "url": "https://github.com/didi/react-tmap/issues"
-  },
-  "homepage": "https://github.com/didi/react-tmap",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
   "files": [
     "dist"
   ],
@@ -40,12 +48,13 @@
     ]
   },
   "peerDependencies": {
+    "@map-component/tmap-types": "^0.1.0",
     "react": ">=16.8.0",
-    "react-dom": ">=16.8.0",
-    "@didi/tmap-types": "github:didi/tmap-types"
+    "react-dom": ">=16.8.0"
   },
   "devDependencies": {
     "@types/events": "^3.0.0",
+    "@map-component/tmap-types": "^0.1.0",
     "@umijs/test": "^3.0.5",
     "dumi": "1.1.32",
     "father-build": "^1.17.2",
@@ -53,8 +62,5 @@
     "lint-staged": "^10.0.7",
     "prettier": "^1.19.1",
     "yorkie": "^2.0.0"
-  },
-  "dependencies": {
-    "@didi/tmap-types": "github:didi/tmap-types"
   }
 }

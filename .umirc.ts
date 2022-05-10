@@ -2,7 +2,7 @@ import { defineConfig } from 'dumi';
 
 export default defineConfig({
   // logo: '',
-  title: '腾讯地图 React 组件',
+  title: 'react-tmap',
   favicon: 'https://s3-gz01.didistatic.com/mapp/img/favicon.ico',
   logo: 'https://s3-gz01.didistatic.com/mapp/img/favicon.ico',
   outputPath: 'docs-dist',
