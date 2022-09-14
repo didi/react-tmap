@@ -12,6 +12,7 @@ type InfoWindowOptions = {
   visible?: boolean;
   offset?: object;
   zIndex?: number;
+  enableCustom?: boolean;
   [key: string]: any;
 };
 
@@ -29,6 +30,7 @@ const InfoWindowComponent: FC<InfoWindowOptions> = props => {
         content: props.content, // 设置信息框内容
         zIndex: props.zIndex!,
         offset: props.offset!,
+        enableCustom: props.enableCustom!,
       });
 
       infoWindowRef.current.on('closeclick', () => {
@@ -67,6 +69,7 @@ InfoWindowComponent.defaultProps = {
   content: '',
   zIndex: 0,
   offset: { x: 0, y: 0 },
+  enableCustom: false,
 };
 
 export default InfoWindowComponent;

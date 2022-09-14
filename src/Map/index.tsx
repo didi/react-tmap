@@ -59,6 +59,7 @@ type TMapProps = {
     rotate?: ControlConfig;
   };
   duration?: number;
+  libraries?: string[];
   onLoad?: (map: TMap.Map) => void;
   [key: string]: any;
 };

@@ -36,7 +36,13 @@ export default () => {
 
   return (
     <div>
-      <button onClick={() => set(s + 1)}>refresh</button>
+      <button
+        onClick={() => {
+          set(s + 1);
+        }}
+      >
+        refresh
+      </button>
       <button onClick={() => setIndex(index > 3 ? 0 : index + 1)}>
         change_center
       </button>
@@ -50,6 +56,7 @@ export default () => {
             position: 'BOTTOM_LEFT',
           },
         }}
+        libraries={['service']}
         ref={map}
         onLoad={m => console.log(m)}
       />
