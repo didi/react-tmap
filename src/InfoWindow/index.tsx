@@ -1,3 +1,4 @@
+import useEvent from '@/useEvent';
 import React, { useEffect, FC, useContext, useRef } from 'react';
 import { MapContext } from '../context';
 
@@ -19,6 +20,7 @@ type InfoWindowOptions = {
 const InfoWindowComponent: FC<InfoWindowOptions> = props => {
   const map = useContext(MapContext);
   const infoWindowRef = useRef<any>(null);
+  useEvent(infoWindowRef.current, props);
 
   useEffect(() => {
     if (map) {
@@ -34,6 +36,12 @@ const InfoWindowComponent: FC<InfoWindowOptions> = props => {
       });
 
       infoWindowRef.current.on('closeclick', () => {
+        if (props.onClose) {
+          props.onClose();
+        }
+        if (props.onCloseClick) {
+          props.onCloseClick();
+        }
         window.dispatchEvent(new CustomEvent('close-click'));
       });
     }
