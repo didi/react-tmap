@@ -14,7 +14,7 @@ react-tmap, a high-performance map component library for react based on Tencent 
 - Complete documentation: documentation based on official documentation and framework usage is highly readable, and component examples are complete
 - Componentization: Encapsulate the Tencent Maps imperative api as a responsive component, no need to care about the complex map api, only need to operate the data
 - Multi-framework: contains [react-tmap](https://github.com/didi/react-tmap) and [vue-tmap](https://github.com/didi/vue-tmap), and share the same set of type definitions
-- Type-safe: supplemented the type declaration of Tencent Maps sdk, components are also developed using TypeScript, a better development experience
+- Type-safe([@map-component/tmap-types](https://github.com/didi/tmap-types)): supplemented the type declaration of Tencent Maps sdk, components are also developed using TypeScript, a better development experience
 - Custom components: provide an open map instance, you can write custom components or directly call the map's native api
 - Performance optimization: unify the map api calling method and data monitoring to prevent performance problems caused by misuse of the map api
 
